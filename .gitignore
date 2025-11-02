@@ -97,3 +97,12 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# large files
+/Library/PackageCache/
+Final-Project-Unity/Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
+/Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
+Final-Project-Unity/Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a
+/Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a
+Final-Project-Unity/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a 
+/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a 
