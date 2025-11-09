@@ -32,10 +32,10 @@ public class CarMovement : MonoBehaviour
             _ => 0f
         };
 
-        float rotation = steer * SteerSpeed * Time.fixedDeltaTime;
+        float rotation = steer * SteerSpeed * Time.deltaTime;
         transform.Rotate(0, 0, rotation);
 
-        float moveAmount = move * MoveSpeed * Time.fixedDeltaTime;
+        float moveAmount = move * MoveSpeed * Time.deltaTime;
         transform.Translate(0, moveAmount, 0);
     }
 } 

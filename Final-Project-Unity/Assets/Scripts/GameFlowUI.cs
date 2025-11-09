@@ -42,5 +42,6 @@ public class GameFlowUI : MonoBehaviour
     {
         // Reload the current scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        GameManager.Instance.StartLevel();
     }
 }

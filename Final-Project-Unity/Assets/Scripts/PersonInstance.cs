@@ -37,7 +37,6 @@ public class PersonInstance : MonoBehaviour, IClickable
             return;
         }
 
-        Debug.Log($"Clicked on {personData.Name}");
         personPickupUI.ShowPerson(this);
     }
 }

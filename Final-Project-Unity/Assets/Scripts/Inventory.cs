@@ -31,7 +31,6 @@ public class Inventory : MonoBehaviour, IInventory
         }
 
         Clues.Add(clue);
-        Debug.Log($"[Inventory] Added: {clue.Name}");
     }
 
     public ClueData DropClue(ClueData clue)

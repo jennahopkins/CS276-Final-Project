@@ -30,7 +30,6 @@ public class CluePickupUI : MonoBehaviour
         if (currentClue != null)
         {
             Inventory.Instance.AddClue(currentClue.clueData); // Add to inventory
-            Debug.Log($"Picked up: {currentClue.clueData.Name}");
             panel.SetActive(false);
             Destroy(currentClue.gameObject);
             currentClue = null;

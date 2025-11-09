@@ -44,8 +44,6 @@ public class GameManager : MonoBehaviour
     {
         if (!gameRunning) return;
 
-        Debug.Log("⏰ Time's up! Checking final conditions...");
-
         GameObject closestPerson = FindClosestPerson();
         if (closestPerson == null)
         {
@@ -81,7 +79,7 @@ public class GameManager : MonoBehaviour
         float closestDist = float.MaxValue;
         GameObject closest = null;
 
-        // ✅ Only detect colliders on the "Person" layer
+        //  Only detect colliders on the "Person" layer
         Collider2D[] hits = Physics2D.OverlapCircleAll(player.position, winDistance, personLayer);
         foreach (var hit in hits)
         {
@@ -107,7 +105,6 @@ public class GameManager : MonoBehaviour
     public void EndLevel(bool playerWon)
     {
         gameRunning = false;
-        Time.timeScale = 0f;
         ui.ShowEndGame(playerWon);
     }
 }
