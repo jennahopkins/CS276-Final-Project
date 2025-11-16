@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -65,8 +66,11 @@ public class GameManager : MonoBehaviour
         var allImportantClues = Resources.LoadAll<ClueData>("").Where(c => c.WinClue).ToList();
 
         // Player must have every important clue
+        Debug.Log(playerItems.Count);
+        Debug.Log(allImportantClues.Count);
         foreach (var clue in allImportantClues)
         {
+            Debug.Log($"Found important clue: {clue.Name}");
             if (!playerItems.Contains(clue))
                 return false;
         }

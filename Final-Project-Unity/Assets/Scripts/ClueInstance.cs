@@ -37,7 +37,6 @@ public class ClueInstance : MonoBehaviour, IClickable
             return;
         }
 
-        Debug.Log($"Clicked on {clueData.Name}");
         cluePickupUI.ShowClue(this);
     }
 }
