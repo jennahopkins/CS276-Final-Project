@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private float winDistance = 5f;
     [SerializeField] private LayerMask personLayer;
-    [SerializeField] private GameFlowUI ui;
+    [SerializeField] private LevelEndManager levelEndManager;
     public static GameManager Instance;
     private bool gameRunning = false;
 
@@ -48,14 +48,15 @@ public class GameManager : MonoBehaviour
         GameObject closestPerson = FindClosestPerson();
         if (closestPerson == null)
         {
-            EndLevel(false);
+            levelEndManager.EndLevel(false);
             return;
         }
 
         bool nearMurderer = IsMurderer(closestPerson);
         bool hasClues = HasClues();
 
-        EndLevel(hasClues && nearMurderer);
+        gameRunning = false;
+        levelEndManager.EndLevel(hasClues && nearMurderer);
     }
 
     private bool HasClues()
@@ -104,11 +105,5 @@ public class GameManager : MonoBehaviour
         var person = obj.GetComponent<PersonInstance>();
         if (person == null || person.personData == null) return false;
         return person.personData.IsMurderer;
-    }
-
-    public void EndLevel(bool playerWon)
-    {
-        gameRunning = false;
-        ui.ShowEndGame(playerWon);
     }
 }
