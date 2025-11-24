@@ -4,9 +4,13 @@
 		<type fullname="ClueData" preserve="nothing"/>
 		<type fullname="ClueInstance" preserve="nothing"/>
 		<type fullname="CluePickupUI" preserve="nothing"/>
-		<type fullname="GameFlowUI" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
 		<type fullname="Inventory" preserve="nothing"/>
+		<type fullname="LevelButton" preserve="nothing"/>
+		<type fullname="LevelData" preserve="nothing"/>
+		<type fullname="LevelEndManager" preserve="nothing"/>
+		<type fullname="LevelUI" preserve="nothing"/>
+		<type fullname="PauseGame" preserve="nothing"/>
 		<type fullname="PersonData" preserve="nothing"/>
 		<type fullname="PersonInstance" preserve="nothing"/>
 		<type fullname="PersonPickupUI" preserve="nothing"/>
@@ -132,6 +136,7 @@
 		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
+		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>

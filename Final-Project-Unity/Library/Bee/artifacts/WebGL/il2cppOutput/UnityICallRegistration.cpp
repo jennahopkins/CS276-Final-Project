@@ -4616,6 +4616,22 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.PlayerConnectionInternal
 
+	//Start Registrations for type : UnityEngine.PlayerPrefs
+
+		//System.Boolean UnityEngine.PlayerPrefs::TrySetInt_Injected(UnityEngine.Bindings.ManagedSpanWrapper&,System.Int32)
+		void Register_UnityEngine_PlayerPrefs_TrySetInt_Injected();
+		Register_UnityEngine_PlayerPrefs_TrySetInt_Injected();
+
+		//System.Int32 UnityEngine.PlayerPrefs::GetInt_Injected(UnityEngine.Bindings.ManagedSpanWrapper&,System.Int32)
+		void Register_UnityEngine_PlayerPrefs_GetInt_Injected();
+		Register_UnityEngine_PlayerPrefs_GetInt_Injected();
+
+		//System.Void UnityEngine.PlayerPrefs::Save()
+		void Register_UnityEngine_PlayerPrefs_Save();
+		Register_UnityEngine_PlayerPrefs_Save();
+
+	//End Registrations for type : UnityEngine.PlayerPrefs
+
 	//Start Registrations for type : UnityEngine.PolygonCollider2D
 
 		//System.Int32 UnityEngine.PolygonCollider2D::GetTotalPointCount_Injected(System.IntPtr)
@@ -7625,6 +7641,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Time::get_timeAsRational_Injected(Unity.IntegerTime.RationalTime&)
 		void Register_UnityEngine_Time_get_timeAsRational_Injected();
 		Register_UnityEngine_Time_get_timeAsRational_Injected();
+
+		//System.Void UnityEngine.Time::set_timeScale(System.Single)
+		void Register_UnityEngine_Time_set_timeScale();
+		Register_UnityEngine_Time_set_timeScale();
 
 	//End Registrations for type : UnityEngine.Time
 

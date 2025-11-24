@@ -38,7 +38,6 @@ public class LevelUI : MonoBehaviour
         if (won)
         {
             nextLevelName = "Level" + (levelNumber + 1);
-            Debug.Log("Level" + (levelNumber + 1));
             nextLevelButton.gameObject.SetActive(true);
         }
         else

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc486d4c49328914585bdc4f2464a548, type: 3}
+  m_Name: Clue_Footprints
+  m_EditorClassIdentifier: Assembly-CSharp::ClueData
+  Name: Muddy Footprints
+  Description: Are those from Mr. Hayes or someone else?
+  Icon: {fileID: 5089104283363664032, guid: f88eec82f5dd60045b1a2ca714cf33bd, type: 3}
+  WinClue: 1
