@@ -5,6 +5,10 @@ public class TimerUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
 
+    private bool tickingStarted = false;
+    private float tickTimer = 0f;
+    private const float tickCooldown = 1f; // Tick every second
+
     private void OnEnable()
     {
         if (TimerManager.Instance != null)
@@ -25,7 +29,21 @@ public class TimerUI : MonoBehaviour
 
     private void UpdateTimerDisplay(float remaining)
     {
-        if (remaining <= 10) timerText.color = Color.red;
+        if (remaining < 11) 
+        {
+            timerText.color = Color.red;
+            tickingStarted = true;
+        }
+
+        if (tickingStarted)
+        {
+            tickTimer -= Time.deltaTime;
+            if (tickTimer <= 0f)
+            {
+                tickTimer = tickCooldown;  
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.clockTick);
+            }
+        }
 
         int minutes = Mathf.FloorToInt(remaining / 60);
         int seconds = Mathf.FloorToInt(remaining % 60);

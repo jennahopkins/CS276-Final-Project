@@ -5,4 +5,5 @@ public class LevelData : ScriptableObject
 {
     public string Name;
     public int Number;
+    public float Time; 
 }

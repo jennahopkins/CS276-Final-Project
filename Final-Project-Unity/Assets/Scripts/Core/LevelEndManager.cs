@@ -23,6 +23,5 @@ public class LevelEndManager : MonoBehaviour
     {
         int nextLevelNumber = currentLevel.Number + 1;
         PlayerProgress.UnlockLevel(nextLevelNumber);
-        Debug.Log($"Level {currentLevel.Number} completed! Level {nextLevelNumber} unlocked.");
     }
 }

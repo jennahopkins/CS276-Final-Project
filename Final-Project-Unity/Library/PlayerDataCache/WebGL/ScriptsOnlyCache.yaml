@@ -2,15 +2,18 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp:
     - ClueData
+    - ClueInstance
     - LevelData
     - PersonData
     Assembly-CSharp.dll:
+    - AudioManager
     - CarMovement
     - ClueData
     - ClueInstance
     - CluePickupUI
     - GameManager
     - Inventory
+    - InventorySlot
     - LevelButton
     - LevelData
     - LevelEndManager
@@ -23,6 +26,7 @@ ScriptsOnlyBuild:
     - TimerUI
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
+    - UnityEditor.U2D.Animation.SkinningCachePersistentState
     Unity.2D.Animation.Runtime.dll:
     - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.DeformationManager
@@ -347,6 +351,9 @@ ScriptsOnlyBuild:
     fullTypeName: PauseGame
     methodName: BackToMainMenu
   - assembly: Assembly-CSharp
+    fullTypeName: TimerManager
+    methodName: EndEarly
+  - assembly: Assembly-CSharp
     fullTypeName: PauseGame
     methodName: Resume
   - assembly: Assembly-CSharp
@@ -361,6 +368,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PauseGame
     methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: TimerManager
+    methodName: EndEarly
   - assembly: Assembly-CSharp
     fullTypeName: PauseGame
     methodName: BackToMainMenu
@@ -383,13 +393,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -473,6 +477,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 29802}
     - Class: 114
       Script: {instanceID: 29814}
+    - Class: 114
+      Script: {instanceID: 54284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -502,13 +508,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -590,6 +590,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 29802}
     - Class: 114
       Script: {instanceID: 29814}
+    - Class: 114
+      Script: {instanceID: 54284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -742,7 +744,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -831,6 +841,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 24882}
     - Class: 114
+      Script: {instanceID: 25154}
+    - Class: 114
       Script: {instanceID: 25576}
     - Class: 114
       Script: {instanceID: 26728}
@@ -870,6 +882,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 29656}
     - Class: 114
       Script: {instanceID: 29856}
+    - Class: 114
+      Script: {instanceID: 150258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -877,6 +891,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1093,7 +1109,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 8523cf79bee6d98aad09507f08873f83
+      Hash: 9ceb7f0cc1ad5f0a03b8012b79b81789
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ClueData
@@ -1423,7 +1439,7 @@ ScriptsOnlyBuild:
     className: ColorLookup
   - hash:
       serializedVersion: 2
-      Hash: 2aa3881314fd50ba590a3afec3609c81
+      Hash: 45d33fb251363e83ceaf5a4527138101
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -1555,7 +1571,7 @@ ScriptsOnlyBuild:
     className: PauseGame
   - hash:
       serializedVersion: 2
-      Hash: f20b8fee5a12f88c39cbfd5f94cadfa5
+      Hash: 025359ce23c3ac354e0e7aa0f14a97e8
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LevelData
@@ -2701,7 +2717,7 @@ ScriptsOnlyBuild:
     className: ShadowsMidtonesHighlights
   - hash:
       serializedVersion: 2
-      Hash: 10daefc9fd329d0219f7a2a87d6a703e
+      Hash: d9f6d575c6423fcaaad532b4bf87578a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TimerManager
@@ -2845,7 +2861,7 @@ ScriptsOnlyBuild:
     className: LightAnchor
   - hash:
       serializedVersion: 2
-      Hash: 0abab1fb3b5532cbb0590eeeb7c66f32
+      Hash: 5101c4e40d8793a93ab91486b7c90d14
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CluePickupUI
@@ -3133,7 +3149,7 @@ ScriptsOnlyBuild:
     className: VertexColorCycler
   - hash:
       serializedVersion: 2
-      Hash: 69d98028596c892abfe7179736fef494
+      Hash: 5848b10d0ab99107d10ac92e1aa114b4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Inventory
@@ -3341,6 +3357,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineExtrude
+  - hash:
+      serializedVersion: 2
+      Hash: f1b05c410602e0e20981cb4dc8128f62
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InventorySlot
+  - hash:
+      serializedVersion: 2
+      Hash: 3b8e4d13a79997b440606b7272ed3839
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioManager
   platform: 20
   scenePathNames:
   - Assets/Scenes/MainScene.unity
@@ -3348,4 +3376,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level2.unity
   - Assets/Scenes/Level3.unity
   playerPath: C:/Users/jenna/Documents/CS276/CS276-Final-Project/Final-Project-Unity/Web
-    Builds
+    Builds/MurderMystery_Beta_v0.2.1

@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: This is awfully close to the broken floodlight...
   Icon: {fileID: 6959695282216639186, guid: a0fdf0804dfd6af438dc5f86e03b5d82, type: 3}
   WinClue: 1
+  Prefab: {fileID: 9179718541736298448, guid: 57a311bac62ab6449a969a349ecd296a, type: 3}

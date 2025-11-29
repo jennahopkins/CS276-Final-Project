@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Scripting.APIUpdating;
 
 public class CarMovement : MonoBehaviour
 {
-    public float MoveSpeed = 2f;
-    public float SteerSpeed = 100f;
+    public float MoveSpeed = 5f;
+    public float SteerSpeed = 200f;
 
     private Rigidbody2D rb;
+    private float moveInput;
+    private float steerInput;
 
     void Awake()
     {
@@ -16,26 +17,27 @@ public class CarMovement : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current == null) return;
+        moveInput = 0f;
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
+            moveInput = 1f;
+        else if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
+            moveInput = -1f;
 
-        float move = Keyboard.current switch
-        {
-            { wKey: { isPressed: true } } or { upArrowKey: { isPressed: true } } => 1f,
-            { sKey: { isPressed: true } } or { downArrowKey: { isPressed: true } } => -1f,
-            _ => 0f
-        };
-
-        float steer = Keyboard.current switch
-        {
-            { aKey: { isPressed: true } } or { leftArrowKey: { isPressed: true } } => 1f,
-            { dKey: { isPressed: true } } or { rightArrowKey: { isPressed: true } } => -1f,
-            _ => 0f
-        };
-
-        float rotation = steer * SteerSpeed * Time.deltaTime;
-        transform.Rotate(0, 0, rotation);
-
-        float moveAmount = move * MoveSpeed * Time.deltaTime;
-        transform.Translate(0, moveAmount, 0);
+        steerInput = 0f;
+        if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
+            steerInput = 1f;
+        else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
+            steerInput = -1f;
     }
-} 
+
+    void FixedUpdate()
+    {
+        // apply rotation
+        float rotationAmount = steerInput * SteerSpeed * Time.fixedDeltaTime;
+        rb.MoveRotation(rb.rotation + rotationAmount);
+
+        // apply forward movement
+        Vector2 direction = transform.up;  // forward direction in 2D
+        rb.MovePosition(rb.position + direction * moveInput * MoveSpeed * Time.fixedDeltaTime);
+    }
+}

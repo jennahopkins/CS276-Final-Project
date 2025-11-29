@@ -8,13 +8,14 @@ public class ClueData : ScriptableObject
     public string Description;
     public Sprite Icon;
     public bool WinClue;
+    public GameObject Prefab;
 
     public void OnClick(GameObject interactor)
     {
         Debug.Log($"You found: {Name}");
 
         // Add to inventory — depends on abstraction, not specific class
-        IInventory inventory = Inventory.Instance;
+        Inventory inventory = Inventory.Instance;
         if (inventory != null)
         {
             inventory.AddClue(this);

@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: These could be from Miss Rose's garden?
   Icon: {fileID: -6006819909244962127, guid: 32044e4942b305b41ac487db9543cc3e, type: 3}
   WinClue: 1
+  Prefab: {fileID: 7742073091615681764, guid: bf6a7097fc8467a448ee64e8adcfa4f1, type: 3}

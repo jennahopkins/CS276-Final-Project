@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClueData
   Name: Muddy Footprints
   Description: Are those from Mr. Hayes or someone else?
-  Icon: {fileID: 5089104283363664032, guid: f88eec82f5dd60045b1a2ca714cf33bd, type: 3}
+  Icon: {fileID: 21300000, guid: 1b5309024031a2240b373c5373aa9216, type: 3}
   WinClue: 1
+  Prefab: {fileID: 7699692092754042729, guid: 789fdd34fb3004d40aefb33c555ac5ba, type: 3}

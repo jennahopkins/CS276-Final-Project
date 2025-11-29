@@ -3,52 +3,60 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-public interface IInventory
+public class Inventory : MonoBehaviour
 {
-    void AddClue(ClueData clue);
-    ClueData DropClue(ClueData clue);
-    bool HasClue(Func<ClueData, bool> condition);
-    List<ClueData> GetClues();
-}
-
-
-public class Inventory : MonoBehaviour, IInventory
-{
-    public static IInventory Instance { get; private set; }
-    public List<ClueData> Clues = new List<ClueData>();
+    public static Inventory Instance { get; private set; }
+    public InventorySlot[] slots;
+    public Transform playerCar;
+    public float dropOffset = -2f;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    public void AddClue(ClueData clue)
+    public bool AddClue(ClueData clue)
     {
-        if (clue == null)
+        foreach (InventorySlot slot in slots)
         {
-            Debug.LogWarning("Tried to add null clue to inventory!");
-            return;
+            if (!slot.HasItem)
+            {
+                slot.SetItem(clue);
+                return true;
+            }
         }
-
-        Clues.Add(clue);
+        return false; // No space
     }
 
-    public ClueData DropClue(ClueData clue)
+    public void DropClue(ClueData clue, InventorySlot slot)
     {
-        ClueData foundClue = Clues.Find(c => c.Name == clue.Name && c.Description == clue.Description);
-        if (foundClue != null)
-        {
-            Clues.Remove(foundClue);
-            Debug.Log($"[Inventory] Dropped: {foundClue.Name}");
-            return foundClue;
-        }
-        else
-        {
-            Debug.LogWarning("Tried to drop a clue that is not in inventory!");
-            return null;
-        }
-    }
-    public bool HasClue(Func<ClueData, bool> condition) => Clues.Any(condition);
+        Vector3 spawnPos = playerCar.transform.position + (dropOffset * playerCar.transform.up);
 
-    public List<ClueData> GetClues() => Clues;
+        Instantiate(clue.Prefab, spawnPos, Quaternion.identity);
+
+        slot.ClearSlot();
+    }
+
+    public bool HasItem(ClueData clue)
+    {
+        foreach (InventorySlot slot in slots)
+        {
+            if (slot.storedClue == clue)
+                return true;
+        }
+        return false;
+    }
+
+    public List<ClueData> GetClues()
+    {
+        List<ClueData> clues = new List<ClueData>();
+
+        foreach (InventorySlot slot in slots)
+        {
+            if (slot.storedClue != null)
+                clues.Add(slot.storedClue);
+        }
+
+        return clues;
+    }
 }

@@ -1,11 +1,11 @@
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviour
 {
     public static TimerManager Instance { get; private set; }
-
-    [SerializeField] private float levelDuration = 120f; // secoonds
+    [SerializeField] private Button endButton;
     private float remainingTime;
     private bool isRunning;
 
@@ -33,19 +33,34 @@ public class TimerManager : MonoBehaviour
         {
             remainingTime = 0;
             isRunning = false;
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.endLevelMusic);
+            endButton.gameObject.SetActive(false);
             OnTimeUp?.Invoke(); // Notify listeners that time’s up
+            return;
         }
 
         OnTimeChanged?.Invoke(remainingTime);
     }
 
-    public void StartTimer()
+    public void StartTimer(float levelDuration)
     {
         remainingTime = levelDuration;
         isRunning = true;
+        endButton.gameObject.SetActive(true);
     }
 
     public void StopTimer() => isRunning = false;
 
     public float GetRemainingTime() => remainingTime;
+
+    public void EndEarly()
+    {
+        if (!isRunning) return;
+
+        remainingTime = 0;
+        isRunning = false;
+        endButton.gameObject.SetActive(false);
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.endLevelMusic);
+        OnTimeUp?.Invoke();
+    }
 }

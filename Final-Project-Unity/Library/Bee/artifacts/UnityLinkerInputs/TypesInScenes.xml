@@ -1,11 +1,13 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="AudioManager" preserve="nothing"/>
 		<type fullname="CarMovement" preserve="nothing"/>
 		<type fullname="ClueData" preserve="nothing"/>
 		<type fullname="ClueInstance" preserve="nothing"/>
 		<type fullname="CluePickupUI" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
 		<type fullname="Inventory" preserve="nothing"/>
+		<type fullname="InventorySlot" preserve="nothing"/>
 		<type fullname="LevelButton" preserve="nothing"/>
 		<type fullname="LevelData" preserve="nothing"/>
 		<type fullname="LevelEndManager" preserve="nothing"/>
@@ -125,7 +127,9 @@
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.Audio.AudioResource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>

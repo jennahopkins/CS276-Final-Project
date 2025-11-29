@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float winDistance = 5f;
     [SerializeField] private LayerMask personLayer;
     [SerializeField] private LevelEndManager levelEndManager;
+    [SerializeField] private LevelData levelData;
     public static GameManager Instance;
     private bool gameRunning = false;
 
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
 
         // Start the timer
         if (TimerManager.Instance != null)
-            TimerManager.Instance.StartTimer();
+            TimerManager.Instance.StartTimer(levelData.Time);
     }
 
     private void HandleTimeUp()

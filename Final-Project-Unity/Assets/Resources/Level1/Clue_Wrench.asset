@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: What is this doing out here?
   Icon: {fileID: 9026172889064723522, guid: d32213a057a6ce043820989e826da565, type: 3}
   WinClue: 0
+  Prefab: {fileID: 5300421127839788473, guid: a30e010e88bcbd642924f4b586832e83, type: 3}

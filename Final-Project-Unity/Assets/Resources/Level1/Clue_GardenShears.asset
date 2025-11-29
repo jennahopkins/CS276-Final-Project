@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: Are those pieces of rose petal, or something else...?
   Icon: {fileID: -8502181095538706099, guid: 46f27424c30159c48807f63952283064, type: 3}
   WinClue: 1
+  Prefab: {fileID: 5065428146710468384, guid: 225f2a4f24b6b9a4b83dfecac0efb5be, type: 3}

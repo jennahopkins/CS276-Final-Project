@@ -12,6 +12,10 @@
 			<method name="Resume"/>
 			<method name="Resume"/>
 		</type>
+		<type fullname="TimerManager">
+			<method name="EndEarly"/>
+			<method name="EndEarly"/>
+		</type>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton">

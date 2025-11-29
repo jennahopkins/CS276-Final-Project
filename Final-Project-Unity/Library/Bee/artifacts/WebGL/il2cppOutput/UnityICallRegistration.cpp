@@ -956,6 +956,30 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.AudioClip
 
+	//Start Registrations for type : UnityEngine.AudioSource
+
+		//System.Void UnityEngine.AudioSource::PlayHelper_Injected(System.IntPtr,System.UInt64)
+		void Register_UnityEngine_AudioSource_PlayHelper_Injected();
+		Register_UnityEngine_AudioSource_PlayHelper_Injected();
+
+		//System.Void UnityEngine.AudioSource::PlayOneShotHelper_Injected(System.IntPtr,System.IntPtr,System.Single)
+		void Register_UnityEngine_AudioSource_PlayOneShotHelper_Injected();
+		Register_UnityEngine_AudioSource_PlayOneShotHelper_Injected();
+
+		//System.Void UnityEngine.AudioSource::Stop_Injected(System.IntPtr,System.Boolean)
+		void Register_UnityEngine_AudioSource_Stop_Injected();
+		Register_UnityEngine_AudioSource_Stop_Injected();
+
+		//System.Void UnityEngine.AudioSource::set_loop_Injected(System.IntPtr,System.Boolean)
+		void Register_UnityEngine_AudioSource_set_loop_Injected();
+		Register_UnityEngine_AudioSource_set_loop_Injected();
+
+		//System.Void UnityEngine.AudioSource::set_resource_Injected(System.IntPtr,System.IntPtr)
+		void Register_UnityEngine_AudioSource_set_resource_Injected();
+		Register_UnityEngine_AudioSource_set_resource_Injected();
+
+	//End Registrations for type : UnityEngine.AudioSource
+
 	//Start Registrations for type : UnityEngine.Avatar
 
 		//System.Void UnityEngine.Avatar::get_humanDescription_Injected(System.IntPtr,UnityEngine.HumanDescription&)
@@ -4046,6 +4070,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Object_Internal_CloneSingle_Injected();
 		Register_UnityEngine_Object_Internal_CloneSingle_Injected();
 
+		//System.IntPtr UnityEngine.Object::Internal_InstantiateSingle_Injected(System.IntPtr,UnityEngine.Vector3&,UnityEngine.Quaternion&)
+		void Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+		Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+
 		//System.Void UnityEngine.Object::DestroyImmediate_Injected(System.IntPtr,System.Boolean)
 		void Register_UnityEngine_Object_DestroyImmediate_Injected();
 		Register_UnityEngine_Object_DestroyImmediate_Injected();
@@ -6414,9 +6442,25 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody2D_get_mass_Injected();
 		Register_UnityEngine_Rigidbody2D_get_mass_Injected();
 
+		//System.Single UnityEngine.Rigidbody2D::get_rotation_Injected(System.IntPtr)
+		void Register_UnityEngine_Rigidbody2D_get_rotation_Injected();
+		Register_UnityEngine_Rigidbody2D_get_rotation_Injected();
+
+		//System.Void UnityEngine.Rigidbody2D::MovePosition_Injected(System.IntPtr,UnityEngine.Vector2&)
+		void Register_UnityEngine_Rigidbody2D_MovePosition_Injected();
+		Register_UnityEngine_Rigidbody2D_MovePosition_Injected();
+
+		//System.Void UnityEngine.Rigidbody2D::MoveRotation_Angle_Injected(System.IntPtr,System.Single)
+		void Register_UnityEngine_Rigidbody2D_MoveRotation_Angle_Injected();
+		Register_UnityEngine_Rigidbody2D_MoveRotation_Angle_Injected();
+
 		//System.Void UnityEngine.Rigidbody2D::get_linearVelocity_Injected(System.IntPtr,UnityEngine.Vector2&)
 		void Register_UnityEngine_Rigidbody2D_get_linearVelocity_Injected();
 		Register_UnityEngine_Rigidbody2D_get_linearVelocity_Injected();
+
+		//System.Void UnityEngine.Rigidbody2D::get_position_Injected(System.IntPtr,UnityEngine.Vector2&)
+		void Register_UnityEngine_Rigidbody2D_get_position_Injected();
+		Register_UnityEngine_Rigidbody2D_get_position_Injected();
 
 	//End Registrations for type : UnityEngine.Rigidbody2D
 

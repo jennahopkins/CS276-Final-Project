@@ -8,6 +8,7 @@ public class CluePickupUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI clueNameText;
     [SerializeField] private TextMeshProUGUI clueDescriptionText;
     [SerializeField] private Button pickupButton;
+    [SerializeField] private Button okayButton;
 
     private ClueInstance currentClue;
 
@@ -15,6 +16,7 @@ public class CluePickupUI : MonoBehaviour
     {
         panel.SetActive(false);
         pickupButton.onClick.AddListener(OnPickupButtonClicked);
+        okayButton.onClick.AddListener(Hide);
     }
 
     public void ShowClue(ClueInstance clue)
@@ -29,10 +31,16 @@ public class CluePickupUI : MonoBehaviour
     {
         if (currentClue != null)
         {
-            Inventory.Instance.AddClue(currentClue.clueData); // Add to inventory
-            panel.SetActive(false);
-            Destroy(currentClue.gameObject);
-            currentClue = null;
+            if (Inventory.Instance.AddClue(currentClue.clueData)) // Add to inventory
+            {
+                panel.SetActive(false);
+                Destroy(currentClue.gameObject);
+                currentClue = null;
+            }
+            else
+            {
+                clueDescriptionText.text += "\nInventory Full!";
+            }
         }
     }
 

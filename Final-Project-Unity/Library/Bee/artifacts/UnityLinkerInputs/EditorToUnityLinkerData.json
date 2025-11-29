@@ -2,6 +2,13 @@
     "serializedTypes": [],
     "typesInScenes": [
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "AudioManager",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "BuildSettings",
             "fullManagedTypeName": "",
@@ -85,6 +92,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "Inventory",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "InventorySlot",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -390,6 +404,24 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioResource",
+            "fullManagedTypeName": "UnityEngine.Audio.AudioResource",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/MainScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "SampleClip",
+            "fullManagedTypeName": "UnityEngine.Audio.AudioResource",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/MainScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioBehaviour",
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
@@ -397,6 +429,15 @@
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Level2.unity",
                 "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/MainScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioClip",
+            "fullManagedTypeName": "UnityEngine.AudioClip",
+            "moduleName": "Audio",
+            "usedInScenes": [
                 "Assets/Scenes/MainScene.unity"
             ]
         },
@@ -432,7 +473,8 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Level2.unity",
-                "Assets/Scenes/Level3.unity"
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/MainScene.unity"
             ]
         },
         {
@@ -477,7 +519,8 @@
             "fullManagedTypeName": "UnityEngine.CircleCollider2D",
             "moduleName": "Physics2D",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity"
+                "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/MainScene.unity"
             ]
         },
         {
@@ -488,7 +531,8 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Level2.unity",
-                "Assets/Scenes/Level3.unity"
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/MainScene.unity"
             ]
         },
         {
@@ -629,8 +673,6 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Level2.unity",
                 "Assets/Scenes/Level3.unity"
             ]
         },
@@ -640,8 +682,6 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Level2.unity",
                 "Assets/Scenes/Level3.unity"
             ]
         },
@@ -651,8 +691,6 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Level2.unity",
                 "Assets/Scenes/Level3.unity"
             ]
         },
@@ -688,7 +726,8 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Level2.unity",
-                "Assets/Scenes/Level3.unity"
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/MainScene.unity"
             ]
         },
         {
@@ -718,7 +757,8 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Level2.unity",
-                "Assets/Scenes/Level3.unity"
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/MainScene.unity"
             ]
         },
         {
@@ -1196,7 +1236,8 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Level2.unity",
-                "Assets/Scenes/Level3.unity"
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/MainScene.unity"
             ]
         },
         {

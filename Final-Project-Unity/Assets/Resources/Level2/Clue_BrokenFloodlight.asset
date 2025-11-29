@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: I wonder if this happened recently...
   Icon: {fileID: -7714484450257397974, guid: 17132cbf5b5a24d4498358917df58fc7, type: 3}
   WinClue: 1
+  Prefab: {fileID: 2437402402981622041, guid: 2eeff87e1c01d964385b8d069c811d9a, type: 3}

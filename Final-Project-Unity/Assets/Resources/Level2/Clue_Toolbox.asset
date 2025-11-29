@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: There's lots of possibilities for what could be in that toolbox...
   Icon: {fileID: -3987404471157004447, guid: 683a2ee850d4d3648b0cc42dbc6ae785, type: 3}
   WinClue: 0
+  Prefab: {fileID: 7787380921632630438, guid: db3c63f83712aab47856ef16930dedf7, type: 3}

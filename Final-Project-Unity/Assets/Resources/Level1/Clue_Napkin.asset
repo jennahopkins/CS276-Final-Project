@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: I wonder what this was used for...or what this unknown substance is
   Icon: {fileID: 8527977852601734216, guid: c45b83c97d8227542860f60a10c2f0ad, type: 3}
   WinClue: 0
+  Prefab: {fileID: 4124548974035003750, guid: 0df212be3d5f8874f9e99ec38a91037a, type: 3}
