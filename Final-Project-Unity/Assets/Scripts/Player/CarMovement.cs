@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class CarMovement : MonoBehaviour
 {
+    /* Manages the car's movement */
+
     public float MoveSpeed = 5f;
     public float SteerSpeed = 200f;
 
@@ -17,6 +19,7 @@ public class CarMovement : MonoBehaviour
 
     void Update()
     {
+        /* Handle player input for car movement */
         moveInput = 0f;
         if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
             moveInput = 1f;
@@ -28,10 +31,13 @@ public class CarMovement : MonoBehaviour
             steerInput = 1f;
         else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
             steerInput = -1f;
-    }
 
-    void FixedUpdate()
-    {
+        // play engine sound based on input
+        if (moveInput != 0f || steerInput != 0f)
+            AudioManager.Instance.PlayEngine(AudioManager.Instance.carEngineSound);
+        else
+            AudioManager.Instance.StopEngine();
+
         // apply rotation
         float rotationAmount = steerInput * SteerSpeed * Time.fixedDeltaTime;
         rb.MoveRotation(rb.rotation + rotationAmount);

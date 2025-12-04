@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
+    /* Game Manager to handle game state and logic */
+
     [SerializeField] private Transform player;
     [SerializeField] private float winDistance = 5f;
     [SerializeField] private LayerMask personLayer;
@@ -25,11 +27,13 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        /* Subscribe to timer's time-up event */
         TimerManager.Instance.OnTimeUp += HandleTimeUp;
     }
 
     private void OnDisable()
     {
+        /* Unsubscribe from timer's time-up event */
         TimerManager.Instance.OnTimeUp -= HandleTimeUp;
     }
 
@@ -44,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     private void HandleTimeUp()
     {
+        /* Handle the event when time is up */
+
         if (!gameRunning) return;
 
         GameObject closestPerson = FindClosestPerson();
@@ -62,6 +68,8 @@ public class GameManager : MonoBehaviour
 
     private bool HasClues()
     {
+        /* Check if player has all important clues to win the level */
+
         var playerItems = Inventory.Instance.GetClues();
         var levelName = levelEndManager.GetCurrentLevelName();
 
@@ -80,6 +88,8 @@ public class GameManager : MonoBehaviour
 
     private GameObject FindClosestPerson()
     {
+        /* Find the closest person within winDistance (who the player thinks is the murderer)  */
+
         float closestDist = float.MaxValue;
         GameObject closest = null;
 
@@ -101,6 +111,8 @@ public class GameManager : MonoBehaviour
     
     private bool IsMurderer(GameObject obj)
     {
+        /* Check if the given person object is the murderer */
+
         var person = obj.GetComponent<PersonInstance>();
         if (person == null || person.personData == null) return false;
         return person.personData.IsMurderer;

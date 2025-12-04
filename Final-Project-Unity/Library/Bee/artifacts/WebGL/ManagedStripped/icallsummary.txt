@@ -200,11 +200,14 @@ UnityEngine.Audio.AudioPlayableOutput::InternalSetTarget_Injected
 UnityEngine.AudioClip::get_frequency_Injected
 UnityEngine.AudioClip::get_samples_Injected
 UnityEngine.AudioClip::get_length_Injected
+UnityEngine.AudioSource::get_isPlaying_Injected
+UnityEngine.AudioSource::get_resource_Injected
 UnityEngine.AudioSource::PlayHelper_Injected
 UnityEngine.AudioSource::PlayOneShotHelper_Injected
 UnityEngine.AudioSource::Stop_Injected
 UnityEngine.AudioSource::set_loop_Injected
 UnityEngine.AudioSource::set_resource_Injected
+UnityEngine.AudioSource::set_volume_Injected
 UnityEngine.Avatar::get_humanDescription_Injected
 UnityEngine.AvatarMask::GetHumanoidBodyPartActive_Injected
 UnityEngine.AvatarMask::get_transformCount_Injected

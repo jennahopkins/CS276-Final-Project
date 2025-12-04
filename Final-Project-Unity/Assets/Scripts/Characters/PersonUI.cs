@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class PersonPickupUI : MonoBehaviour
 {
+    /* UI panel to show person details when clicked */
+    
     [SerializeField] private GameObject panel;
     [SerializeField] private TextMeshProUGUI personNameText;
     [SerializeField] private TextMeshProUGUI personDescriptionText;
     [SerializeField] private Button okButton;
-
-    private PersonInstance currentPerson;
 
     private void Awake()
     {
@@ -19,7 +19,6 @@ public class PersonPickupUI : MonoBehaviour
 
     public void ShowPerson(PersonInstance person)
     {
-        currentPerson = person;
         personNameText.text = person.personData.Name;
         personDescriptionText.text = person.personData.Description;
         panel.SetActive(true);
@@ -28,13 +27,10 @@ public class PersonPickupUI : MonoBehaviour
     private void OnOkButtonClicked()
     {
         panel.SetActive(false);
-        currentPerson = null;
-
     }
 
     public void Hide()
     {
         panel.SetActive(false);
-        currentPerson = null;
     }
 }

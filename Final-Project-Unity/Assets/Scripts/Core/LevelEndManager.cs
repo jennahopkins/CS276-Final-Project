@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class LevelEndManager : MonoBehaviour
 {
+    /* Manages the end of the level */
+
     [SerializeField] private LevelData currentLevel; 
-    [SerializeField] private LevelUI ui; // Assign your UI panel here
+    [SerializeField] private LevelUI ui;
 
     public string GetCurrentLevelName()
     {
@@ -12,6 +14,8 @@ public class LevelEndManager : MonoBehaviour
 
     public void EndLevel(bool playerWon)
     {
+        /* Handle end of level logic */
+
         if (ui != null)
             ui.ShowEndGame(playerWon, currentLevel.Number);
 
@@ -21,6 +25,8 @@ public class LevelEndManager : MonoBehaviour
 
     private void UnlockNextLevel()
     {
+        /* Unlock the next level upon winning the current level */
+        
         int nextLevelNumber = currentLevel.Number + 1;
         PlayerProgress.UnlockLevel(nextLevelNumber);
     }

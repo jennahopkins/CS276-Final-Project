@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc486d4c49328914585bdc4f2464a548, type: 3}
+  m_Name: Clue_Gloves
+  m_EditorClassIdentifier: Assembly-CSharp::ClueData
+  Name: Gloves
+  Description: Were these used with the goggles?
+  Icon: {fileID: -3960259407536092533, guid: 0ce73439ca7ea974cbbbddf1c1ec78dd, type: 3}
+  WinClue: 0
+  Prefab: {fileID: 5909624141923567333, guid: 57618f3a3d70be14d9a233b83742651b, type: 3}

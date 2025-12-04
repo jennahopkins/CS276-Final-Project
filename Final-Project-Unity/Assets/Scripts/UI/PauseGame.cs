@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class PauseGame : MonoBehaviour
 {
+    /* Manages the pause menu functionality */
     [SerializeField] private GameObject pauseMenuPanel;
     [SerializeField] private Button pauseButton;
 
@@ -15,6 +16,9 @@ public class PauseGame : MonoBehaviour
 
     public void Pause()
     {
+        /* Show pause menu and freeze game */
+
+        pauseMenuPanel.SetActive(true);
         pauseMenuPanel.SetActive(true);
         Time.timeScale = 0f; // freeze game
         pauseButton.gameObject.SetActive(false);
@@ -22,6 +26,8 @@ public class PauseGame : MonoBehaviour
 
     public void Resume()
     {
+        /* Hide pause menu and resume game */
+
         pauseMenuPanel.SetActive(false);
         Time.timeScale = 1f; // resume game
         pauseButton.gameObject.SetActive(true);
@@ -29,6 +35,8 @@ public class PauseGame : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        /* Return to main menu from pause menu */
+        
         Time.timeScale = 1f; // ensure time is running
         pauseButton.gameObject.SetActive(true);
         SceneLoader.LoadMainMenu();

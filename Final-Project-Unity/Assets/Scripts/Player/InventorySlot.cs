@@ -4,13 +4,15 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IPointerClickHandler
 {
+    /* Represents a single slot in the player's inventory */
     public Image icon;
     public ClueData storedClue;
-
     public bool HasItem => storedClue != null;
 
     public void SetItem(ClueData newClue)
     {
+        /* Set the clue item in this inventory slot */
+
         storedClue = newClue;
         icon.sprite = newClue.Icon;
         icon.enabled = true;
@@ -26,6 +28,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     public void ClearSlot()
     {
+        /* Clear the clue item from this inventory slot */
         storedClue = null;
         icon.sprite = null;
         icon.enabled = false;
@@ -41,6 +44,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        /* Handle click events on the inventory slot */
         if (storedClue != null)
         {
             Inventory.Instance.DropClue(storedClue, this);

@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PersonInstance : MonoBehaviour, IClickable
 {
+    /* Instance of a person in the game world */
+
     [SerializeField] public PersonData personData;
     [SerializeField] private LayerMask personLayer;
 
@@ -31,9 +33,11 @@ public class PersonInstance : MonoBehaviour, IClickable
 
     public void Trigger()
     {
+        /* Trigger interaction with this person */
+        
         if (personData == null)
         {
-            Debug.LogWarning("No ClueData assigned!");
+            Debug.LogWarning("No PersonData assigned!");
             return;
         }
 

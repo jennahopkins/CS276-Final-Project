@@ -1000,7 +1000,6 @@ struct OutRec_tE6A5E982E8FC8E8BE005217861141F2B13BD117E;
 struct ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1;
 struct PathVisitor_tCD0947C41CDBDB774D22D560E5FFA01EF61C4446;
 struct PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B;
-struct PersonInstance_tD1A6018698684F13638EAC54FE0E993421579851;
 struct PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3;
 struct PhysicsDocumentPicker_t6B9D461697BAEF92BAE3141E17ED34637074159D;
 struct PhysicsShapeGroup2D_tDD50752FEA50CB691889997A8E0E2789F26DA003;
@@ -28916,7 +28915,6 @@ struct PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B  : public Scriptable
 {
 	String_t* ___Name;
 	String_t* ___Description;
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___Icon;
 	bool ___IsMurderer;
 };
 struct PlayableAsset_t6964211C3DAE503FEEDD04089ED6B962945D271E  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
@@ -31685,8 +31683,13 @@ struct AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B  : public MonoBeha
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___levelMusic;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___endLevelMusic;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clockTick;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clueFoundSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___cluePickupSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___carEngineSound;
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___musicSource;
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___sfxSource;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___engineSource;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___engineSource2;
 };
 struct AudioTrack_t28A237BE8E15F2A1DE39A3DAC10AC0526D823FC4  : public TrackAsset_t31E19BE900C90F6616C0D337652C8614CD833B96
 {
@@ -32296,7 +32299,6 @@ struct PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3  : public MonoBe
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___personNameText;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___personDescriptionText;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___okButton;
-	PersonInstance_tD1A6018698684F13638EAC54FE0E993421579851* ___currentPerson;
 };
 struct PixelPerfectCamera_t158E7699626BAB0C2E3CFD4E2592DF1AFB8FB195  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -43169,15 +43171,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8586[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8589[2] = 
 {
 	static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t934DF92436CC427D8818091BBAD54DE5C34C4BB4_StaticFields, ___424F927758BC0B072FEA5A0A075E9F94CD8932C07D06E745E644B641B045DB26)),static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t934DF92436CC427D8818091BBAD54DE5C34C4BB4_StaticFields, ___CD9453CE9DA4A675A3BE1450D19406F93ADEB9AABA50D0363F06682AE15CD674)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8594[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8594[3] = 
 {
-	static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___Name)),static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___Description)),static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___Icon)),static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___IsMurderer)),};
+	static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___Name)),static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___Description)),static_cast<int32_t>(offsetof(PersonData_t8538EDCEC4F6F695840F29662BD96DA46E63473B, ___IsMurderer)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8595[3] = 
 {
 	static_cast<int32_t>(offsetof(PersonInstance_tD1A6018698684F13638EAC54FE0E993421579851, ___personData)),static_cast<int32_t>(offsetof(PersonInstance_tD1A6018698684F13638EAC54FE0E993421579851, ___personLayer)),static_cast<int32_t>(offsetof(PersonInstance_tD1A6018698684F13638EAC54FE0E993421579851, ___personPickupUI)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8596[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8596[4] = 
 {
-	static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___panel)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___personNameText)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___personDescriptionText)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___okButton)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___currentPerson)),};
+	static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___panel)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___personNameText)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___personDescriptionText)),static_cast<int32_t>(offsetof(PersonPickupUI_t85AFA38BF9FDC66710CF5EB8DF4FEEC56AAA56A3, ___okButton)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8597[5] = 
 {
 	static_cast<int32_t>(offsetof(ClueData_tAA57C9B1BA6DEA3E4CF7992A8F5002AA896CF06E, ___Name)),static_cast<int32_t>(offsetof(ClueData_tAA57C9B1BA6DEA3E4CF7992A8F5002AA896CF06E, ___Description)),static_cast<int32_t>(offsetof(ClueData_tAA57C9B1BA6DEA3E4CF7992A8F5002AA896CF06E, ___Icon)),static_cast<int32_t>(offsetof(ClueData_tAA57C9B1BA6DEA3E4CF7992A8F5002AA896CF06E, ___WinClue)),static_cast<int32_t>(offsetof(ClueData_tAA57C9B1BA6DEA3E4CF7992A8F5002AA896CF06E, ___Prefab)),};
@@ -43187,9 +43189,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8598[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8599[6] = 
 {
 	static_cast<int32_t>(offsetof(CluePickupUI_t3F6C66471AFC2AB0B1C0D56212D92E33ED786B43, ___panel)),static_cast<int32_t>(offsetof(CluePickupUI_t3F6C66471AFC2AB0B1C0D56212D92E33ED786B43, ___clueNameText)),static_cast<int32_t>(offsetof(CluePickupUI_t3F6C66471AFC2AB0B1C0D56212D92E33ED786B43, ___clueDescriptionText)),static_cast<int32_t>(offsetof(CluePickupUI_t3F6C66471AFC2AB0B1C0D56212D92E33ED786B43, ___pickupButton)),static_cast<int32_t>(offsetof(CluePickupUI_t3F6C66471AFC2AB0B1C0D56212D92E33ED786B43, ___okayButton)),static_cast<int32_t>(offsetof(CluePickupUI_t3F6C66471AFC2AB0B1C0D56212D92E33ED786B43, ___currentClue)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8600[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8600[12] = 
 {
-	static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B_StaticFields, ___U3CInstanceU3Ek__BackingField)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___menuMusic)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___levelMusic)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___endLevelMusic)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___clockTick)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___musicSource)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___sfxSource)),};
+	static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B_StaticFields, ___U3CInstanceU3Ek__BackingField)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___menuMusic)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___levelMusic)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___endLevelMusic)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___clockTick)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___clueFoundSound)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___cluePickupSound)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___carEngineSound)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___musicSource)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___sfxSource)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___engineSource)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___engineSource2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8601[2] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields, ___U3CU3E9)),static_cast<int32_t>(offsetof(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields, ___U3CU3E9__12_0)),};

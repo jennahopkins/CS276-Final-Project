@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
+    /* Manages the UI for level start and end panels */
+
     [Header("Panels")]
     [SerializeField] private GameObject startPanel;
     [SerializeField] private GameObject endPanel;
@@ -33,6 +35,8 @@ public class LevelUI : MonoBehaviour
 
     public void ShowEndGame(bool won, int levelNumber)
     {
+        /* Display the end game panel with appropriate messages and options */
+
         endPanel.SetActive(true);
         endStoryText.text = won ? "You solved the case!" : "You failed to catch the murderer.";
         if (won)
@@ -49,27 +53,28 @@ public class LevelUI : MonoBehaviour
 
     private void OnStartClicked()
     {
+        /* Start the level */
         startPanel.SetActive(false);
-        // Optional: notify GameManager that the level has started
         GameManager.Instance.StartLevel();
     }
 
     private void OnRestartClicked()
     {
-        // Reload the current scene
+        /* Reload the current scene */
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         GameManager.Instance.StartLevel();
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.levelMusic);
     }
 
     private void OnMainMenuClicked()
     {
-        // Load the main menu scene
+        /* Load the main menu scene */
         SceneLoader.LoadMainMenu();
     }
 
     private void OnNextLevelClicked()
     {
-        // Load the next level scene
+        /* Load the next level scene */
         SceneLoader.LoadLevel(nextLevelName);
     }
 }

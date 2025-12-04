@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour
 {
-    public LevelData levelData; // Set in Inspector
+    /* Button representing a level in the level selection UI */
+    public LevelData levelData;
     private Color unlockedColor = Color.white;
     private Color lockedColor = Color.gray;
 
@@ -12,6 +13,7 @@ public class LevelButton : MonoBehaviour
         Image buttonBackground = GetComponent<Image>();
         bool isUnlocked = PlayerProgress.IsLevelUnlocked(levelData.Number);
 
+        // Set button color based on unlock status
         if(buttonBackground != null)
             buttonBackground.color = isUnlocked ? unlockedColor : lockedColor;
 
@@ -28,6 +30,7 @@ public class LevelButton : MonoBehaviour
 
     private void OnClick()
     {
+        /* Load the selected level when the button is clicked */
         SceneLoader.LoadLevel(levelData.Name);
     }
 }

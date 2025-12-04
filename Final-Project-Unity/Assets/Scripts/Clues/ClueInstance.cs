@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class ClueInstance : MonoBehaviour, IClickable
 {
+    /* Instance of a clue in the game world */
+
     [SerializeField] public ClueData clueData;
     [SerializeField] private LayerMask clueLayer;
     private CluePickupUI cluePickupUI;
@@ -31,6 +33,8 @@ public class ClueInstance : MonoBehaviour, IClickable
 
     public void Trigger()
     {
+        /* Trigger interaction with this clue */
+        
         if (clueData == null)
         {
             Debug.LogWarning("No ClueData assigned!");

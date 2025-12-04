@@ -5,14 +5,19 @@
 			<method name="BackToMainMenu"/>
 			<method name="BackToMainMenu"/>
 			<method name="BackToMainMenu"/>
+			<method name="BackToMainMenu"/>
 			<method name="Pause"/>
 			<method name="Pause"/>
 			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Resume"/>
 			<method name="Resume"/>
 			<method name="Resume"/>
 			<method name="Resume"/>
 		</type>
 		<type fullname="TimerManager">
+			<method name="EndEarly"/>
+			<method name="EndEarly"/>
 			<method name="EndEarly"/>
 			<method name="EndEarly"/>
 		</type>

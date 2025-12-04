@@ -2,6 +2,8 @@ using UnityEngine;
 
 public static class PlayerProgress
 {
+    /* Manages and saves the player's progress through levels */
+
     private const string LEVEL_KEY = "LevelUnlocked_";
 
     // Check if a level is unlocked

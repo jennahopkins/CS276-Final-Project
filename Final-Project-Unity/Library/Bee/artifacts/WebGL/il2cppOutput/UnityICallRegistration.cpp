@@ -958,6 +958,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.AudioSource
 
+		//System.Boolean UnityEngine.AudioSource::get_isPlaying_Injected(System.IntPtr)
+		void Register_UnityEngine_AudioSource_get_isPlaying_Injected();
+		Register_UnityEngine_AudioSource_get_isPlaying_Injected();
+
+		//System.IntPtr UnityEngine.AudioSource::get_resource_Injected(System.IntPtr)
+		void Register_UnityEngine_AudioSource_get_resource_Injected();
+		Register_UnityEngine_AudioSource_get_resource_Injected();
+
 		//System.Void UnityEngine.AudioSource::PlayHelper_Injected(System.IntPtr,System.UInt64)
 		void Register_UnityEngine_AudioSource_PlayHelper_Injected();
 		Register_UnityEngine_AudioSource_PlayHelper_Injected();
@@ -977,6 +985,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.AudioSource::set_resource_Injected(System.IntPtr,System.IntPtr)
 		void Register_UnityEngine_AudioSource_set_resource_Injected();
 		Register_UnityEngine_AudioSource_set_resource_Injected();
+
+		//System.Void UnityEngine.AudioSource::set_volume_Injected(System.IntPtr,System.Single)
+		void Register_UnityEngine_AudioSource_set_volume_Injected();
+		Register_UnityEngine_AudioSource_set_volume_Injected();
 
 	//End Registrations for type : UnityEngine.AudioSource
 
